@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+	  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	  
+	  <title>Frontend Mentor | Article preview component</title>
+
+	  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+	  <style>
+		@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
+		.colorVeryGrayBlue{
+			color: hsl(217, 19%, 35%);
+		}
+		.colorDarkBlue{
+			color: hsl(214, 17%, 51%);
+		}
+		.colorGrayBlue{
+			color: hsl(212, 23%, 69%);
+		}
+		.colorLightBlue{
+			color: hsl(210, 46%, 95%);
+		}
+		.bgcolorDarkBlue{
+			background-color: hsl(214, 17%, 51%);
+		}
+		.bgcolorGrayBlue{
+			background-color: hsl(212, 23%, 69%);
+		}
+		.bgcolorLightBlue{
+			background-color: hsl(210, 46%, 95%);
+		}
+		
+		body{
+			margin-top: 100px;
+			background-color: hsl(210, 46%, 95%);
+		}
+		main{
+			font-family: Manrope;
+			background-color: hsl(0,0%,100%);
+			width: 85.5%;
+			margin: auto;
+			border-radius: 10px;
+			display: grid;
+			z-index: 1;
+		}
+		img{
+			width: 100%;
+		}
+		h1{
+			font-size: 15px;
+			line-height: 1.6;
+		}
+		p{
+			text-align: left;
+			line-height: 1.4;
+			padding-bottom: 10px;
+		}
+		button{
+			border: none;
+			background-color: transparent;
+		}
+		#under-section{
+			height: 250px;
+			font-size: 13px;
+		}
+		footer{
+			
+		}
+		#footerOG{
+			display: grid;
+			grid-template-columns: 55px 160px 20px;
+		}
+		#imgAccount{
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			grid-column: 1/2;
+			grid-row: 1/3;
+		}
+		span{
+			font-weight: bold;
+			grid-column: 2/3;
+		}
+		time{
+			grid-row: 2/3;
+			grid-column: 2/3;
+		}
+		#buttonShare{
+			width: 16px;
+			padding: 10px;
+			border-radius: 50%;
+			grid-column: 3/4;
+			grid-row: 1/3;
+			margin: auto;
+		}
+		#share{
+			font-size: 13px;
+			font-weight: normal;
+			letter-spacing: 3px;
+			font-family: Manrope;
+		}
+		.imgSmall{
+			width: 24px;
+			height: 24px;
+		}
+		
+		
+		@media screen and (max-width: 390px){
+			main{
+				grid-template-column: 1fr 1fr;
+			}
+			#img_section{
+				height: 220px;
+				margin-top: -14px;
+				overflow: hidden;
+			}
+			#under-section{
+				padding: 20px 32px 20px 32px;
+			}
+			
+			#buttonShareImageALT{
+				width: 14px;
+				height: 14px;
+				filter: brightness(0) invert(1);
+				margin: 0 auto;
+			}
+			
+			#footerALT{
+				display: none;
+				grid-template-columns: 30% 6% 6% 7% 40%;
+				grid-gap: 23px;
+				border-radius: 0px 0px 10px 10px;
+				margin: -22px -32px 0 -32px;
+				align-items: center;
+				height: 82px;
+			}
+			#share{
+				padding-left: 30px;
+				padding-right: 10px
+				grid-column: 1/2;
+				grid-row: 1/2;
+			}
+			#imageFacebook{
+				grid-column: 2/3;
+				grid-row: 1/2;
+			}
+			#imageTwitter{
+				grid-column: 3/4;
+				grid-row: 1/2;
+			}
+			#imagePinterest{
+				grid-column: 4/5;
+				grid-row: 1/2;
+			}
+			#buttonShareALT{
+				grid-column: 5/6;
+				grid-row: 1/2;
+				
+				border-radius: 50%;
+				width: 32px;
+				height: 32px;
+				display: flex;
+				align-items: center;
+			}
+		}
+		@media screen and (min-width: 391px){
+			body{
+				display:flex;
+				flex-flow: column wrap;
+				margin-top: 30vh;
+			}
+			main{
+				width: 760px;
+				grid-template-columns: 44% 56%;
+				height: 300px;
+			}
+			#img_section{
+				overflow: hidden;
+				grid-column: 1/2;
+			}
+			#under-section{
+				grid-column: 2/3;
+				margin: 20px 40px 20px 40px;
+			}
+			h1{
+				font-size: 20px;
+			}
+			#imgMain{
+				width: 370px;
+			}
+			#buttonShare{
+				margin-left: 90px;
+			}
+			#footerALT{
+				display: none;
+				grid-template-columns: 1f 1f 1f 1f;
+				z-index: 2;
+			}
+			#buttonShareALT{
+				display: none;
+			}
+		}
+		
+		.attribution { font-size: 11px; text-align: center; }
+		.attribution a { color: hsl(228, 45%, 44%); }
+	  </style>
+	</head>
+	<body>
+		<main>
+			<section id = 'img_section'>
+				<img id = 'imgMain' src = './images/drawers.jpg'>
+			</section>	
+			<section id = 'under-section'>
+				<h1 class = 'colorVeryGrayBlue'>
+				Shift the overall look and feel by adding these wonderful 
+				touches to furniture in your home
+				</h1>
+				<p class = 'colorDarkBlue'>
+				Ever been in a room and felt like something was missing? Perhaps 
+				it felt slightly bare and uninviting. I’ve got some simple tips 
+				to help you make any room feel complete.
+				</p>
+				<footer>
+					<section id = 'footerOG'>
+						<img id = 'imgAccount' src = './images/avatar-michelle.jpg'>
+						<span class = 'colorVeryGrayBlue'>
+							Michelle Appleton
+						</span>
+						<time class = 'colorGrayBlue'>
+							28 Jun 2020
+						</time>
+						<img onclick='sharePopup()' class = 'bgcolorLightBlue' id = 'buttonShare' src = './images/icon-share.svg'>
+					</section>
+				</footer>
+				<section id = 'footerALT' class = 'bgcolorDarkBlue'>
+					<div id = 'share' class = 'colorLightBlue'>SHARE</div>
+					<image id = 'imageFacebook' class = 'imgSmall' src = './images/icon-facebook.svg'>
+					<image id = 'imageTwitter' class = 'imgSmall'src = './images/icon-twitter.svg'>
+					<image id = 'imagePinterest' class = 'imgSmall'src = './images/icon-pinterest.svg'>
+					<span id = 'buttonShareALT' class = 'bgcolorGrayBlue' onclick = 'sharePopup()'>
+						<image id = 'buttonShareImageALT' src = './images/icon-share.svg'>
+					</span>
+					<!-- <image id = 'buttonShareImageALT'  src = './images/icon-share.svg'> -->
+				</section>
+			</section>
+		</main>
+	  
+	  <div class="attribution">
+		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+		Coded by <a href="#">Awilixsh</a>.
+	  </div>
+	<script>
+		function sharePopup(){
+			const footerOG = document.getElementById('footerOG');
+			const footerALT = document.getElementById('footerALT');
+			if(window.getComputedStyle(footerOG, null).display == 'grid' && window.getComputedStyle(footerALT, null).display == 'none'){
+				if(screen.width <= '390'){
+					footerOG.style.display = 'none';
+				}
+				footerALT.style.display = 'grid';
+			} else if (screen.width > '390' || window.getComputedStyle(footerOG, null).display == 'none'){
+				if(screen.width <= '390'){
+					footerOG.style.display = 'grid';
+				}
+				footerALT.style.display = 'none';
+			}
+		}
+	</script>
+	</body>
+</html>
