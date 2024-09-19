@@ -12,8 +12,6 @@ This is a solution to the [Article preview component challenge on Frontend Mento
   - [Built with](#built-with)
 - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -25,12 +23,15 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Desktop](./screenshot_desktop.png)
+![DesktopShare](./screenshot_desktop-share.png)
+![Mobile](./screenshot_mobile.png)
+![MobileShare](./screenshot_mobile-share.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here]()
-- Live Site URL: [Add live site URL here]()
+- Solution URL: [Github](https://github.com/Awilixsh/Article-Preview-Component---Frontend-Mentor)
+- Live Site URL: [Github Pages](https://awilixsh.github.io/Article-Preview-Component---Frontend-Mentor/)
 
 ## My process
 
@@ -44,4 +45,4 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@Awilixsh](https://www.frontendmentor.io/profile/Awilixsh)

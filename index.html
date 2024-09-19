@@ -43,6 +43,7 @@
 		main{
 			font-family: Manrope;
 			background-color: hsl(0,0%,100%);
+			box-shadow: 0px 14px 14px 14px hsla(217, 19%, 35%, 0.1);
 			width: 85.5%;
 			margin: auto;
 			border-radius: 10px;
@@ -102,37 +103,18 @@
 			margin: auto;
 			margin: 0 auto;
 		}
-		
 		#share{
 			font-size: 13px;
 			font-weight: normal;
 			letter-spacing: 3px;
 			font-family: Manrope;
+			padding-left: 30px;
+			padding-right: 10px;
 		}
 		.imgSmall{
 			width: 24px;
 			height: 24px;
-		}
-		
-		#share{
-			padding-left: 30px;
-			padding-right: 10px
-			grid-column: 1/2;
-			grid-row: 1/2;
-		}
-		#imageFacebook{
-			grid-column: 2/3;
-			grid-row: 1/2;
-		}
-		#imageTwitter{
-			grid-column: 3/4;
-			grid-row: 1/2;
-		}
-		#imagePinterest{
-			grid-column: 4/5;
-			grid-row: 1/2;
-		}
-		
+		}		
 		@media screen and (max-width: 390px){
 			main{
 				grid-template-column: 1fr 1fr;
@@ -216,7 +198,6 @@
 				transform: rotate(45deg);
 			}
 		}
-		
 		.attribution { font-size: 11px; text-align: center; }
 		.attribution a { color: hsl(228, 45%, 44%); }
 	  </style>
@@ -251,7 +232,7 @@
 					<img id = 'buttonShare' src = './images/icon-share.svg'>
 				</div>
 				<section id = 'footerALT' class = 'bgcolorVeryGrayBlue'>
-					<div id = 'share' class = 'colorLightBlue'>SHARE</div>
+					<div id = 'share' class = 'colorGrayBlue'>SHARE</div>
 					<image id = 'imageFacebook' class = 'imgSmall' src = './images/icon-facebook.svg'>
 					<image id = 'imageTwitter' class = 'imgSmall'src = './images/icon-twitter.svg'>
 					<image id = 'imagePinterest' class = 'imgSmall'src = './images/icon-pinterest.svg'>
